@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  display: grid;
+  /* grid-template-columns: 25% 200px 25%;
+  grid-template-rows: 200px 200px; */
+  /* grid-template: filas/colimnas  */
+  /* fr = fraciones */
+  grid-template: 300px 150px 100px / repeat(4, minmax(150px, 1fr));
+  /* column-gap: 30px;
+  row-gap: 20px; */
+  /* gap: filas  columns; */
+  gap: 10px;
+}
+.item {
+  background: lightseagreen;
+  padding: 10px;
+  border: 1px solid red;
+}
+.item:nth-of-type(4) {
+  background: blue;
+  overflow: auto;
+  /* display: subgrid; */
+  /* display: inline-grid; */
+  display: grid;
+  grid-template: 50px 50px 50px / 50px 50px 50px;
+}
+.item .item {
+  background: chartreuse;
+}
